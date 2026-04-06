@@ -1,0 +1,940 @@
+[
+	{
+		"Format": "ADDWF  f,d",
+		"Mnemonic": "ADDWF",
+		"Opcode": 0x0700,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Add W and f"
+	},
+	{
+		"Format": "ADDWFC f,d",
+		"Mnemonic": "ADDWFC",
+		"Opcode": 0x3D00,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Add with Carry W and f"
+	},
+	{
+		"Format": "ANDWF  f,d",
+		"Mnemonic": "ANDWF",
+		"Opcode": 0x0500,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "AND W with f"
+	},
+	{
+		"Format": "ASRF   f,d",
+		"Mnemonic": "ASRF",
+		"Opcode": 0x3700,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Arithmetic Right Shift"
+	},
+	{
+		"Format": "LSLF   f,d",
+		"Mnemonic": "LSLF",
+		"Opcode": 0x3500,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Logical Left Shift"
+	},
+	{
+		"Format": "LSRF   f,d",
+		"Mnemonic": "LSRF",
+		"Opcode": 0x3600,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Logical Right Shift"
+	},
+	{
+		"Format": "CLRF   f",
+		"Mnemonic": "CLRF",
+		"Opcode": 0x0180,
+		"OpcodeMask": 0x3F80,
+		"Parameters":
+		[
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Clear f"
+	},
+	{
+		"Format": "CLRW    ",
+		"Mnemonic": "CLRW",
+		"Opcode": 0x0100,
+		"OpcodeMask": 0x3FFF,
+		"Parameters":
+		[
+		],
+		"Cycles": "1",
+		"Description": "Clear W"
+	},
+	{
+		"Format": "COMF   f,d",
+		"Mnemonic": "COMF",
+		"Opcode": 0x0900,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Complement f"
+	},
+	{
+		"Format": "DECF   f,d",
+		"Mnemonic": "DECF",
+		"Opcode": 0x0300,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Decrement f"
+	},
+	{
+		"Format": "INCF   f,d",
+		"Mnemonic": "INCF",
+		"Opcode": 0x0A00,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Increment f"
+	},
+	{
+		"Format": "IORWF  f,d",
+		"Mnemonic": "IORWF",
+		"Opcode": 0x0400,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Inclusive OR W with f"
+	},
+	{
+		"Format": "MOVF   f,d",
+		"Mnemonic": "MOVF",
+		"Opcode": 0x0800,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Move f"
+	},
+	{
+		"Format": "MOVWF  f",
+		"Mnemonic": "MOVWF",
+		"Opcode": 0x0080,
+		"OpcodeMask": 0x3F80,
+		"Parameters":
+		[
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Move W to f"
+	},
+	{
+		"Format": "RLF     f,d",
+		"Mnemonic": "RLF",
+		"Opcode": 0x0D00,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Rotate Left f through Carry"
+	},
+	{
+		"Format": "RRF     f,d",
+		"Mnemonic": "RRF",
+		"Opcode": 0x0C00,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Rotate Right f through Carry"
+	},
+	{
+		"Format": "SUBWF  f,d",
+		"Mnemonic": "SUBWF",
+		"Opcode": 0x0200,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Subtract W from f"
+	},
+	{
+		"Format": "SUBWFB f,d",
+		"Mnemonic": "SUBWFB",
+		"Opcode": 0x3B00,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Subtract with Borrow W from f"
+	},
+	{
+		"Format": "SWAPF  f,d",
+		"Mnemonic": "SWAPF",
+		"Opcode": 0x0E00,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Swap nibbles in f"
+	},
+	{
+		"Format": "XORWF  f,d",
+		"Mnemonic": "XORWF",
+		"Opcode": 0x0600,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Exclusive OR W with f"
+	},
+	{
+		"Format": "DECFSZ f,d",
+		"Mnemonic": "DECFSZ",
+		"Opcode": 0x0B00,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1/2",
+		"Description": "Decrement f, Skip if 0"
+	},
+	{
+		"Format": "INCFSZ f,d",
+		"Mnemonic": "INCFSZ",
+		"Opcode": 0x0F00,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "d",
+				"Mask": 0x0080,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1/2",
+		"Description": "Increment f, Skip if 0"
+	},
+	{
+		"Format": "BCF     f,b",
+		"Mnemonic": "BCF",
+		"Opcode": 0x1000,
+		"OpcodeMask": 0x3C00,
+		"Parameters":
+		[
+			{
+				"Name": "b",
+				"Mask": 0x0380,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Bit Clear f"
+	},
+	{
+		"Format": "BSF     f,b",
+		"Mnemonic": "BSF",
+		"Opcode": 0x1400,
+		"OpcodeMask": 0x3C00,
+		"Parameters":
+		[
+			{
+				"Name": "b",
+				"Mask": 0x0380,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Bit Set f"
+	},
+	{
+		"Format": "BTFSC  f,b",
+		"Mnemonic": "BTFSC",
+		"Opcode": 0x1800,
+		"OpcodeMask": 0x3C00,
+		"Parameters":
+		[
+			{
+				"Name": "b",
+				"Mask": 0x0380,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1/2",
+		"Description": "Bit Test f, Skip if Clear"
+	},
+	{
+		"Format": "BTFSS  f,b",
+		"Mnemonic": "BTFSS",
+		"Opcode": 0x1C00,
+		"OpcodeMask": 0x3C00,
+		"Parameters":
+		[
+			{
+				"Name": "b",
+				"Mask": 0x0380,
+				"Offset": 7
+			},
+			{
+				"Name": "f",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1/2",
+		"Description": "Bit Test f, Skip if Set"
+	},
+	{
+		"Format": "ADDLW  k",
+		"Mnemonic": "ADDLW",
+		"Opcode": 0x3E00,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "k",
+				"Mask": 0x00FF,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Add literal and W"
+	},
+	{
+		"Format": "ANDLW  k",
+		"Mnemonic": "ANDLW",
+		"Opcode": 0x3900,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "k",
+				"Mask": 0x00FF,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "AND literal with W"
+	},
+	{
+		"Format": "IORLW  k",
+		"Mnemonic": "IORLW",
+		"Opcode": 0x3800,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "k",
+				"Mask": 0x00FF,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Inclusive OR literal with W"
+	},
+	{
+		"Format": "MOVLB  k",
+		"Mnemonic": "MOVLB",
+		"Opcode": 0x0020,
+		"OpcodeMask": 0x3FE0,
+		"Parameters":
+		[
+			{
+				"Name": "k",
+				"Mask": 0x001F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Move literal to BSR"
+	},
+	{
+		"Format": "MOVLP  k",
+		"Mnemonic": "MOVLP",
+		"Opcode": 0x3180,
+		"OpcodeMask": 0x3F80,
+		"Parameters":
+		[
+			{
+				"Name": "k",
+				"Mask": 0x007F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Move literal to PCLATH"
+	},
+	{
+		"Format": "MOVLW  k",
+		"Mnemonic": "MOVLW",
+		"Opcode": 0x3000,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "k",
+				"Mask": 0x00FF,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Move literal to W"
+	},
+	{
+		"Format": "SUBLW  k",
+		"Mnemonic": "SUBLW",
+		"Opcode": 0x3C00,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "k",
+				"Mask": 0x00FF,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Subtract W from literal"
+	},
+	{
+		"Format": "XORLW  k",
+		"Mnemonic": "XORLW",
+		"Opcode": 0x3A00,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "k",
+				"Mask": 0x00FF,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Exclusive OR literal with W"
+	},
+	{
+		"Format": "BRA    k",
+		"Mnemonic": "BRA",
+		"Opcode": 0x3200,
+		"OpcodeMask": 0x3E00,
+		"Parameters":
+		[
+			{
+				"Name": "k",
+				"Mask": 0x01FF,
+				"Offset": 0
+			}
+		],
+		"Cycles": "2",
+		"Description": "Relative Branch"
+	},
+	{
+		"Format": "BRW     ",
+		"Mnemonic": "BRW",
+		"Opcode": 0x000B,
+		"OpcodeMask": 0x3FFF,
+		"Parameters":
+		[
+		],
+		"Cycles": "2",
+		"Description": "Relative Branch with W"
+	},
+	{
+		"Format": "CALL   k",
+		"Mnemonic": "CALL",
+		"Opcode": 0x2000,
+		"OpcodeMask": 0x3800,
+		"Parameters":
+		[
+			{
+				"Name": "k",
+				"Mask": 0x07FF,
+				"Offset": 0
+			}
+		],
+		"Cycles": "2",
+		"Description": "Call Subroutine"
+	},
+	{
+		"Format": "CALLW   ",
+		"Mnemonic": "CALLW",
+		"Opcode": 0x000A,
+		"OpcodeMask": 0x3FFF,
+		"Parameters":
+		[
+		],
+		"Cycles": "2",
+		"Description": "Call Subroutine with W"
+	},
+	{
+		"Format": "GOTO   k",
+		"Mnemonic": "GOTO",
+		"Opcode": 0x2800,
+		"OpcodeMask": 0x3800,
+		"Parameters":
+		[
+			{
+				"Name": "k",
+				"Mask": 0x07FF,
+				"Offset": 0
+			}
+		],
+		"Cycles": "2",
+		"Description": "Go to address"
+	},
+	{
+		"Format": "RETFIE  ",
+		"Mnemonic": "RETFIE",
+		"Opcode": 0x0009,
+		"OpcodeMask": 0x3FFF,
+		"Parameters":
+		[
+		],
+		"Cycles": "2",
+		"Description": "Return from interrupt"
+	},
+	{
+		"Format": "RETLW  k",
+		"Mnemonic": "RETLW",
+		"Opcode": 0x3400,
+		"OpcodeMask": 0x3F00,
+		"Parameters":
+		[
+			{
+				"Name": "k",
+				"Mask": 0x00FF,
+				"Offset": 0
+			}
+		],
+		"Cycles": "2",
+		"Description": "Return with literal in W"
+	},
+	{
+		"Format": "RETURN  ",
+		"Mnemonic": "RETURN",
+		"Opcode": 0x0008,
+		"OpcodeMask": 0x3FFF,
+		"Parameters":
+		[
+		],
+		"Cycles": "2",
+		"Description": "Return from Subroutine"
+	},
+	{
+		"Format": "CLRWDT  ",
+		"Mnemonic": "CLRWDT",
+		"Opcode": 0x0064,
+		"OpcodeMask": 0x3FFF,
+		"Parameters":
+		[
+		],
+		"Cycles": "1",
+		"Description": "Clear Watchdog Timer"
+	},
+	{
+		"Format": "NOP     ",
+		"Mnemonic": "NOP",
+		"Opcode": 0x0000,
+		"OpcodeMask": 0x3FFF,
+		"Parameters":
+		[
+		],
+		"Cycles": "1",
+		"Description": "No Operation"
+	},
+	{
+		"Format": "OPTION  ",
+		"Mnemonic": "OPTION",
+		"Opcode": 0x0062,
+		"OpcodeMask": 0x3FFF,
+		"Parameters":
+		[
+		],
+		"Cycles": "1",
+		"Description": "Load OPTION_REG register with W"
+	},
+	{
+		"Format": "RESET   ",
+		"Mnemonic": "RESET",
+		"Opcode": 0x0001,
+		"OpcodeMask": 0x3FFF,
+		"Parameters":
+		[
+		],
+		"Cycles": "1",
+		"Description": "Software device Reset"
+	},
+	{
+		"Format": "SLEEP   ",
+		"Mnemonic": "SLEEP",
+		"Opcode": 0x0063,
+		"OpcodeMask": 0x3FFF,
+		"Parameters":
+		[
+		],
+		"Cycles": "1",
+		"Description": "Go into Standby mode"
+	},
+	{
+		"Format": "TRIS   f",
+		"Mnemonic": "TRIS",
+		"Opcode": 0x0060,
+		"OpcodeMask": 0x3FF8,
+		"Parameters":
+		[
+			{
+				"Name": "f",
+				"Mask": 0x0007,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Load TRIS register with W"
+	},
+	{
+		"Format": "ADDFSR n,k",
+		"Mnemonic": "ADDFSR",
+		"Opcode": 0x3100,
+		"OpcodeMask": 0x3F80,
+		"Parameters":
+		[
+			{
+				"Name": "n",
+				"Mask": 0x0040,
+				"Offset": 6
+			},
+			{
+				"Name": "k",
+				"Mask": 0x003F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Add Literal k to FSRn"
+	},
+	{
+		"Format": "MOVIW  n,m",
+		"Mnemonic": "MOVIW",
+		"Opcode": 0x0010,
+		"OpcodeMask": 0x3FF8,
+		"Parameters":
+		[
+			{
+				"Name": "n",
+				"Mask": 0x0004,
+				"Offset": 2
+			},
+			{
+				"Name": "m",
+				"Mask": 0x0003,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Move Indirect FSRn to W with pre/post inc/dec modifier, mm"
+	},
+	{
+		"Format": "MOVIW  n,k",
+		"Mnemonic": "MOVIW",
+		"Opcode": 0x3F00,
+		"OpcodeMask": 0x3F80,
+		"Parameters":
+		[
+			{
+				"Name": "n",
+				"Mask": 0x0040,
+				"Offset": 6
+			},
+			{
+				"Name": "k",
+				"Mask": 0x003F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Move INDFn to W, Indexed Indirect"
+	},
+	{
+		"Format": "MOVWI  n,m",
+		"Mnemonic": "MOVWI",
+		"Opcode": 0x0018,
+		"OpcodeMask": 0x3FF8,
+		"Parameters":
+		[
+			{
+				"Name": "n",
+				"Mask": 0x0004,
+				"Offset": 2
+			},
+			{
+				"Name": "m",
+				"Mask": 0x0003,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Move W to Indirect FSRn with pre/post inc/dec modifier, mm"
+	},
+	{
+		"Format": "MOVWI  n,k",
+		"Mnemonic": "MOVWI",
+		"Opcode": 0x3F80,
+		"OpcodeMask": 0x3F80,
+		"Parameters":
+		[
+			{
+				"Name": "n",
+				"Mask": 0x0040,
+				"Offset": 6
+			},
+			{
+				"Name": "k",
+				"Mask": 0x003F,
+				"Offset": 0
+			}
+		],
+		"Cycles": "1",
+		"Description": "Move W to INDFn, Indexed Indirect."
+	}
+]

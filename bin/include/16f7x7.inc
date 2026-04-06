@@ -1,0 +1,457 @@
+; =====================================
+;		Banks Definitions
+; =====================================
+BANK0			EQU	000h
+BANK1			EQU	001h
+BANK2			EQU	002h
+BANK3			EQU	003h
+BANK4			EQU	004h
+BANK5			EQU	005h
+BANK6			EQU	006h
+BANK7			EQU	007h
+BANK8			EQU	008h
+BANK9			EQU	009h
+BANK10			EQU	00Ah
+BANK11			EQU	00Bh
+BANK12			EQU	00Ch
+BANK13			EQU	00Dh
+BANK14			EQU	00Eh
+BANK15			EQU	00Fh
+BANK16			EQU	010h
+BANK17			EQU	011h
+BANK18			EQU	012h
+BANK19			EQU	013h
+BANK20			EQU	014h
+BANK21			EQU	015h
+BANK22			EQU	016h
+BANK23			EQU	017h
+BANK24			EQU	018h
+BANK25			EQU	019h
+BANK26			EQU	01Ah
+BANK27			EQU	01Bh
+BANK28			EQU	01Ch
+BANK29			EQU	01Dh
+BANK30			EQU	01Eh
+BANK31			EQU	01Fh
+
+; =====================================
+;		SFR Definitions
+; =====================================
+INDF			EQU	(000h & 07Fh)	; BANK0
+TMR0			EQU	(001h & 07Fh)	; BANK0
+PCL				EQU	(002h & 07Fh)	; BANK0
+STATUS			EQU	(003h & 07Fh)	; BANK0
+FSR				EQU	(004h & 07Fh)	; BANK0
+PORTA			EQU	(005h & 07Fh)	; BANK0
+PORTB			EQU	(006h & 07Fh)	; BANK0
+PORTC			EQU	(007h & 07Fh)	; BANK0
+PORTD			EQU	(008h & 07Fh)	; BANK0
+PORTE			EQU	(009h & 07Fh)	; BANK0
+PCLATH			EQU	(00Ah & 07Fh)	; BANK0
+INTCON			EQU	(00Bh & 07Fh)	; BANK0
+PIR1			EQU	(00Ch & 07Fh)	; BANK0
+PIR2			EQU	(00Dh & 07Fh)	; BANK0
+TMR1L			EQU	(00Eh & 07Fh)	; BANK0
+TMR1H			EQU	(00Fh & 07Fh)	; BANK0
+T1CON			EQU	(010h & 07Fh)	; BANK0
+TMR2			EQU	(011h & 07Fh)	; BANK0
+T2CON			EQU	(012h & 07Fh)	; BANK0
+SSPBUF			EQU	(013h & 07Fh)	; BANK0
+SSPCON			EQU	(014h & 07Fh)	; BANK0
+CCPR1L			EQU	(015h & 07Fh)	; BANK0
+CCPR1H			EQU	(016h & 07Fh)	; BANK0
+CCP1CON			EQU	(017h & 07Fh)	; BANK0
+RCSTA			EQU	(018h & 07Fh)	; BANK0
+TXREG			EQU	(019h & 07Fh)	; BANK0
+RCREG			EQU	(01Ah & 07Fh)	; BANK0
+CCPR2L			EQU	(01Bh & 07Fh)	; BANK0
+CCPR2H			EQU	(01Ch & 07Fh)	; BANK0
+CCP2CON			EQU	(01Dh & 07Fh)	; BANK0
+ADRESH			EQU	(01Eh & 07Fh)	; BANK0
+ADCON0			EQU	(01Fh & 07Fh)	; BANK0
+; =====================================
+OPTION_REG		EQU	(081h & 07Fh)	; BANK1
+TRISA			EQU	(085h & 07Fh)	; BANK1
+TRISB			EQU	(086h & 07Fh)	; BANK1
+TRISC			EQU	(087h & 07Fh)	; BANK1
+TRISD			EQU	(088h & 07Fh)	; BANK1
+TRISE			EQU	(089h & 07Fh)	; BANK1
+PIE1			EQU	(08Ch & 07Fh)	; BANK1
+PIE2			EQU	(08Dh & 07Fh)	; BANK1
+PCON			EQU	(08Eh & 07Fh)	; BANK1
+OSCCON			EQU	(08Fh & 07Fh)	; BANK1
+OSCTUNE			EQU	(090h & 07Fh)	; BANK1
+SSPCON2			EQU	(091h & 07Fh)	; BANK1
+PR2				EQU	(092h & 07Fh)	; BANK1
+SSPADD			EQU	(093h & 07Fh)	; BANK1
+SSPSTAT			EQU	(094h & 07Fh)	; BANK1
+CCPR3L			EQU	(095h & 07Fh)	; BANK1
+CCPR3H			EQU	(096h & 07Fh)	; BANK1
+CCP3CON			EQU	(097h & 07Fh)	; BANK1
+TXSTA			EQU	(098h & 07Fh)	; BANK1
+SPBRG			EQU	(099h & 07Fh)	; BANK1
+ADCON2			EQU	(09Bh & 07Fh)	; BANK1
+CMCON			EQU	(09Ch & 07Fh)	; BANK1
+CVRCON			EQU	(09Dh & 07Fh)	; BANK1
+ADRESL			EQU	(09Eh & 07Fh)	; BANK1
+ADCON1			EQU	(09Fh & 07Fh)	; BANK1
+; =====================================
+WDTCON			EQU	(0105h & 07Fh)	; BANK2
+LVDCON			EQU	(0109h & 07Fh)	; BANK2
+EEDATL			EQU	(010Ch & 07Fh)	; BANK2
+EEDATA			EQU	(010Ch & 07Fh)	; BANK2
+EEADRL			EQU	(010Dh & 07Fh)	; BANK2
+EEADR			EQU	(010Dh & 07Fh)	; BANK2
+EEDATH			EQU	(010Eh & 07Fh)	; BANK2
+EEADRH			EQU	(010Fh & 07Fh)	; BANK2
+; =====================================
+EECON1			EQU	(018Ch & 07Fh)	; BANK3
+; =====================================
+PMDATA			EQU	(010Ch & 07Fh)	; BANK2
+PMDATL			EQU	(010Ch & 07Fh)	; BANK2
+PMADRL			EQU	(010Dh & 07Fh)	; BANK2
+PMDATH			EQU	(010Eh & 07Fh)	; BANK2
+PMADRH			EQU	(010Fh & 07Fh)	; BANK2
+; =====================================
+PMCON1			EQU	(018Ch & 07Fh)	; BANK3
+
+; =====================================
+;		SFR's Bits Definitions
+; =====================================
+CARRY			EQU	0	; STATUS
+DC				EQU	1	; STATUS
+ZERO			EQU	2	; STATUS
+PD				EQU	3	; STATUS
+TO				EQU	4	; STATUS
+RP0				EQU	5	; STATUS
+RP1				EQU	6	; STATUS
+IRP				EQU	7	; STATUS
+; =====================================
+RA0				EQU	0	; PORTA
+RA1				EQU	1	; PORTA
+RA2				EQU	2	; PORTA
+RA3				EQU	3	; PORTA
+RA4				EQU	4	; PORTA
+RA5				EQU	5	; PORTA
+RA6				EQU	6	; PORTA
+RA7				EQU	7	; PORTA
+; =====================================
+RB0				EQU	0	; PORTB
+RB1				EQU	1	; PORTB
+RB2				EQU	2	; PORTB
+RB3				EQU	3	; PORTB
+RB4				EQU	4	; PORTB
+RB5				EQU	5	; PORTB
+RB6				EQU	6	; PORTB
+RB7				EQU	7	; PORTB
+; =====================================
+RC0				EQU	0	; PORTC
+RC1				EQU	1	; PORTC
+RC2				EQU	2	; PORTC
+RC3				EQU	3	; PORTC
+RC4				EQU	4	; PORTC
+RC5				EQU	5	; PORTC
+RC6				EQU	6	; PORTC
+RC7				EQU	7	; PORTC
+; =====================================
+RD0				EQU	0	; PORTD
+RD1				EQU	1	; PORTD
+RD2				EQU	2	; PORTD
+RD3				EQU	3	; PORTD
+RD4				EQU	4	; PORTD
+RD5				EQU	5	; PORTD
+RD6				EQU	6	; PORTD
+RD7				EQU	7	; PORTD
+; =====================================
+RE0				EQU	0	; PORTE
+RE1				EQU	1	; PORTE
+RE2				EQU	2	; PORTE
+RE3				EQU	3	; PORTE
+; =====================================
+RBIF			EQU	0	; INTCON
+INT0IF			EQU	1	; INTCON
+TMR0IF			EQU	2	; INTCON
+RBIE			EQU	3	; INTCON
+INT0IE			EQU	4	; INTCON
+TMR0IE			EQU	5	; INTCON
+PEIE			EQU	6	; INTCON
+GIE				EQU	7	; INTCON
+; =====================================
+TMR1IF			EQU	0	; PIR1
+TMR2IF			EQU	1	; PIR1
+CCP1IF			EQU	2	; PIR1
+SSPIF			EQU	3	; PIR1
+TXIF			EQU	4	; PIR1
+RCIF			EQU	5	; PIR1
+ADIF			EQU	6	; PIR1
+PSPIF			EQU	7	; PIR1
+; =====================================
+CCP2IF			EQU	0	; PIR2
+CCP3IF			EQU	1	; PIR2
+BCLIF			EQU	3	; PIR2
+LVDIF			EQU	5	; PIR2
+CMIF			EQU	6	; PIR2
+OSFIF			EQU	7	; PIR2
+; =====================================
+TMR1ON			EQU	0	; T1CON
+TMR1CS			EQU	1	; T1CON
+T1SYNC			EQU	2	; T1CON
+T1OSCEN			EQU	3	; T1CON
+T1CKPS0			EQU	4	; T1CON
+T1CKPS1			EQU	5	; T1CON
+T1RUN			EQU	6	; T1CON
+; =====================================
+T2CKPS0			EQU	0	; T2CON
+T2CKPS1			EQU	1	; T2CON
+TMR2ON			EQU	2	; T2CON
+TOUTPS0			EQU	3	; T2CON
+TOUTPS1			EQU	4	; T2CON
+TOUTPS2			EQU	5	; T2CON
+TOUTPS3			EQU	6	; T2CON
+; =====================================
+SSPM0			EQU	0	; SSPCON
+SSPM1			EQU	1	; SSPCON
+SSPM2			EQU	2	; SSPCON
+SSPM3			EQU	3	; SSPCON
+CKP				EQU	4	; SSPCON
+SSPEN			EQU	5	; SSPCON
+SSPOV			EQU	6	; SSPCON
+WCOL			EQU	7	; SSPCON
+; =====================================
+CCP1M0			EQU	0	; CCP1CON
+CCP1M1			EQU	1	; CCP1CON
+CCP1M2			EQU	2	; CCP1CON
+CCP1M3			EQU	3	; CCP1CON
+CCP1Y			EQU	4	; CCP1CON
+CCP1X			EQU	5	; CCP1CON
+; =====================================
+RX9D			EQU	0	; RCSTA
+OERR			EQU	1	; RCSTA
+FERR			EQU	2	; RCSTA
+ADDEN			EQU	3	; RCSTA
+CREN			EQU	4	; RCSTA
+SREN			EQU	5	; RCSTA
+RX9				EQU	6	; RCSTA
+SPEN			EQU	7	; RCSTA
+; =====================================
+CCP2M0			EQU	0	; CCP2CON
+CCP2M1			EQU	1	; CCP2CON
+CCP2M2			EQU	2	; CCP2CON
+CCP2M3			EQU	3	; CCP2CON
+CCP2Y			EQU	4	; CCP2CON
+CCP2X			EQU	5	; CCP2CON
+; =====================================
+ADON			EQU	0	; ADCON0
+CHS3			EQU	1	; ADCON0
+GODONE			EQU	2	; ADCON0
+CHS0			EQU	3	; ADCON0
+CHS1			EQU	4	; ADCON0
+CHS2			EQU	5	; ADCON0
+ADCS0			EQU	6	; ADCON0
+ADCS1			EQU	7	; ADCON0
+; =====================================
+PS0				EQU	0	; OPTION_REG
+PS1				EQU	1	; OPTION_REG
+PS2				EQU	2	; OPTION_REG
+PSA				EQU	3	; OPTION_REG
+T0SE			EQU	4	; OPTION_REG
+T0CS			EQU	5	; OPTION_REG
+INTEDG			EQU	6	; OPTION_REG
+RBPU			EQU	7	; OPTION_REG
+; =====================================
+TRISA0			EQU	0	; TRISA
+TRISA1			EQU	1	; TRISA
+TRISA2			EQU	2	; TRISA
+TRISA3			EQU	3	; TRISA
+TRISA4			EQU	4	; TRISA
+TRISA5			EQU	5	; TRISA
+TRISA6			EQU	6	; TRISA
+TRISA7			EQU	7	; TRISA
+; =====================================
+TRISB0			EQU	0	; TRISB
+TRISB1			EQU	1	; TRISB
+TRISB2			EQU	2	; TRISB
+TRISB3			EQU	3	; TRISB
+TRISB4			EQU	4	; TRISB
+TRISB5			EQU	5	; TRISB
+TRISB6			EQU	6	; TRISB
+TRISB7			EQU	7	; TRISB
+; =====================================
+TRISC0			EQU	0	; TRISC
+TRISC1			EQU	1	; TRISC
+TRISC2			EQU	2	; TRISC
+TRISC3			EQU	3	; TRISC
+TRISC4			EQU	4	; TRISC
+TRISC5			EQU	5	; TRISC
+TRISC6			EQU	6	; TRISC
+TRISC7			EQU	7	; TRISC
+; =====================================
+TRISD0			EQU	0	; TRISD
+TRISD1			EQU	1	; TRISD
+TRISD2			EQU	2	; TRISD
+TRISD3			EQU	3	; TRISD
+TRISD4			EQU	4	; TRISD
+TRISD5			EQU	5	; TRISD
+TRISD6			EQU	6	; TRISD
+TRISD7			EQU	7	; TRISD
+; =====================================
+TRISE0			EQU	0	; TRISE
+TRISE1			EQU	1	; TRISE
+TRISE2			EQU	2	; TRISE
+PSPMODE			EQU	4	; TRISE
+IBOV			EQU	5	; TRISE
+OBF				EQU	6	; TRISE
+IBF				EQU	7	; TRISE
+; =====================================
+TMR1IE			EQU	0	; PIE1
+TMR2IE			EQU	1	; PIE1
+CCP1IE			EQU	2	; PIE1
+SSPIE			EQU	3	; PIE1
+TXIE			EQU	4	; PIE1
+RCIE			EQU	5	; PIE1
+ADIE			EQU	6	; PIE1
+PSPIE			EQU	7	; PIE1
+; =====================================
+CCP2IE			EQU	0	; PIE2
+CCP3IE			EQU	1	; PIE2
+BCLIE			EQU	3	; PIE2
+LVDIE			EQU	5	; PIE2
+CMIE			EQU	6	; PIE2
+OSFIE			EQU	7	; PIE2
+; =====================================
+BOR				EQU	0	; PCON
+POR				EQU	1	; PCON
+SBOREN			EQU	2	; PCON
+; =====================================
+SCS0			EQU	0	; OSCCON
+SCS1			EQU	1	; OSCCON
+IOFS			EQU	2	; OSCCON
+OSTS			EQU	3	; OSCCON
+IRCF0			EQU	4	; OSCCON
+IRCF1			EQU	5	; OSCCON
+IRCF2			EQU	6	; OSCCON
+; =====================================
+TUN0			EQU	0	; OSCTUNE
+TUN1			EQU	1	; OSCTUNE
+TUN2			EQU	2	; OSCTUNE
+TUN3			EQU	3	; OSCTUNE
+TUN4			EQU	4	; OSCTUNE
+TUN5			EQU	5	; OSCTUNE
+; =====================================
+SEN				EQU	0	; SSPCON2
+RSEN			EQU	1	; SSPCON2
+PEN				EQU	2	; SSPCON2
+RCEN			EQU	3	; SSPCON2
+ACKEN			EQU	4	; SSPCON2
+ACKDT			EQU	5	; SSPCON2
+ACKSTAT			EQU	6	; SSPCON2
+GCEN			EQU	7	; SSPCON2
+; =====================================
+BF				EQU	0	; SSPSTAT
+UA				EQU	1	; SSPSTAT
+RW				EQU	2	; SSPSTAT
+START			EQU	3	; SSPSTAT
+STOP			EQU	4	; SSPSTAT
+DA				EQU	5	; SSPSTAT
+CKE				EQU	6	; SSPSTAT
+SMP				EQU	7	; SSPSTAT
+; =====================================
+CCP3M0			EQU	0	; CCP3CON
+CCP3M1			EQU	1	; CCP3CON
+CCP3M2			EQU	2	; CCP3CON
+CCP3M3			EQU	3	; CCP3CON
+CCP3Y			EQU	4	; CCP3CON
+CCP3X			EQU	5	; CCP3CON
+; =====================================
+TX9D			EQU	0	; TXSTA
+TRMT			EQU	1	; TXSTA
+BRGH			EQU	2	; TXSTA
+SYNC			EQU	4	; TXSTA
+TXEN			EQU	5	; TXSTA
+TX9				EQU	6	; TXSTA
+CSRC			EQU	7	; TXSTA
+; =====================================
+ACQT0			EQU	2	; ADCON2
+ACQT1			EQU	3	; ADCON2
+ACQT2			EQU	4	; ADCON2
+; =====================================
+CM0				EQU	0	; CMCON
+CM1				EQU	1	; CMCON
+CM2				EQU	2	; CMCON
+CIS				EQU	3	; CMCON
+C1INV			EQU	4	; CMCON
+C2INV			EQU	5	; CMCON
+C1OUT			EQU	6	; CMCON
+C2OUT			EQU	7	; CMCON
+; =====================================
+CVR0			EQU	0	; CVRCON
+CVR1			EQU	1	; CVRCON
+CVR2			EQU	2	; CVRCON
+CVR3			EQU	3	; CVRCON
+CVRR			EQU	5	; CVRCON
+CVROE			EQU	6	; CVRCON
+CVREN			EQU	7	; CVRCON
+; =====================================
+PCFG0			EQU	0	; ADCON1
+PCFG1			EQU	1	; ADCON1
+PCFG2			EQU	2	; ADCON1
+PCFG3			EQU	3	; ADCON1
+VCFG0			EQU	4	; ADCON1
+VCFG1			EQU	5	; ADCON1
+ADCS2			EQU	6	; ADCON1
+ADFM			EQU	7	; ADCON1
+; =====================================
+SWDTEN			EQU	0	; WDTCON
+WDTPS0			EQU	1	; WDTCON
+WDTPS1			EQU	2	; WDTCON
+WDTPS2			EQU	3	; WDTCON
+WDTPS3			EQU	4	; WDTCON
+; =====================================
+LVDL0			EQU	0	; LVDCON
+LVDL1			EQU	1	; LVDCON
+LVDL2			EQU	2	; LVDCON
+LVDL3			EQU	3	; LVDCON
+LVDEN			EQU	4	; LVDCON
+IRVST			EQU	5	; LVDCON
+; =====================================
+RD				EQU	0	; EECON1
+
+; =====================================
+;		Configuration Definitions
+; =====================================
+; =====================================
+CONFIG_ADDR		EQU	02007h
+PROTECT			EQU	01FFFh
+UNPROTECT		EQU	03FFFh
+CCPRC1			EQU	03FFFh
+CCPRB3			EQU	02FFFh
+DEBUGEN			EQU	037FFh
+DEBUGDIS		EQU	03FFFh
+BORV20			EQU	03FFFh
+BORV27			EQU	03F7Fh
+BORV42			EQU	03EFFh
+BORV45			EQU	03E7Fh
+BORON			EQU	03FFFh
+BORDIS			EQU	03FBFh
+MCLREN			EQU	03FFFh
+MCLRDIS			EQU	03FDFh
+PWRTEN			EQU	03FF7h
+PWRTDIS			EQU	03FFFh
+WDTEN			EQU	03FFFh
+WDTDIS			EQU	03FFBh
+RCCLK			EQU	03FFFh
+RCIO			EQU	03FFEh
+INTCLK			EQU	03FFDh
+INTIO			EQU	03FFCh
+EC				EQU	03FEFh
+HS				EQU	03FEEh
+XT				EQU	03FEDh
+LP				EQU	03FECh
+; =====================================
+CONFIG_ADDR2	EQU	02008h
+BORSOFT			EQU	03FFFh
+BORDISSLEEP		EQU	03FBFh
+IESOEN			EQU	03FFFh
+IESODIS			EQU	03FFDh
+FCMEN			EQU	03FFFh
+FCMDIS			EQU	03FFEh

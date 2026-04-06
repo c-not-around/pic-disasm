@@ -1,0 +1,1269 @@
+[
+	/* 16F627A,16F628A,16F648A */
+	{
+		"Processor"  : "16F627A",
+		"RomSize"    : 1024,
+		"RamBanks"   : 4,
+		"RamOffset"  : 0x20,
+		"ComOffset"  : 0x70,
+		"CoreRegs"   : "00,02,03,04,0A,0B",
+		"IdLocations": {
+			"Offset" : 0x2000,
+			"Count"  : 4,
+			"Mask"   : 0x7F
+		},
+		"ConfigWords": [
+			{
+				"Offset" : 0x2007,
+				"Bits"   : [
+					{
+						"Name"  : "FOSC",
+						"Mask"  : 0x0013,
+						"Values": [
+							{
+								"Value": 0x0000, 
+								"Mnemonic": "LP" 
+							},
+							{ 
+								"Value": 0x0001, 
+								"Mnemonic": "XT" 
+							},
+							{ 
+								"Value": 0x0002, 
+								"Mnemonic": "HS" 
+							},
+							{ 
+								"Value": 0x0003, 
+								"Mnemonic": "EC" 
+							},
+							{ 
+								"Value": 0x0010, 
+								"Mnemonic": "INTIO" 
+							},
+							{ 
+								"Value": 0x0011, 
+								"Mnemonic": "INTCLK" 
+							},
+							{ 
+								"Value": 0x0012, 
+								"Mnemonic": "RCIO" 
+							},
+							{ 
+								"Value": 0x0013, 
+								"Mnemonic": "RCCLK" 
+							}
+						]
+					},
+					{
+						"Name": "WDTE",
+						"Mask": 0x0004,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "WDTDIS" 
+							},
+							{ 
+								"Value": 0x0004, 
+								"Mnemonic": "WDTEN" 
+							}
+						]
+					},
+					{
+						"Name": "#PWRTE",
+						"Mask": 0x0008,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "PWRTEN" 
+							},
+							{ 
+								"Value": 0x0008, 
+								"Mnemonic": "PWRTDIS" 
+							}
+						]
+					},
+					{
+						"Name": "MCLRE",
+						"Mask": 0x0020,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "MCLRDIS" 
+							},
+							{ 
+								"Value": 0x0020, 
+								"Mnemonic": "MCLREN" 
+							}
+						]
+					},
+					{
+						"Name": "BOREN",
+						"Mask": 0x0040,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "BORDIS" 
+							},
+							{ 
+								"Value": 0x0040, 
+								"Mnemonic": "BOREN" 
+							}
+						]
+					},
+					{
+						"Name": "LVP",
+						"Mask": 0x0080,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "LVPDIS" 
+							},
+							{ 
+								"Value": 0x0080, 
+								"Mnemonic": "LVPEN" 
+							}
+						]
+					},
+					{
+						"Name": "#CPD",
+						"Mask": 0x0100,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "CPD" 
+							},
+							{ 
+								"Value": 0x0100, 
+								"Mnemonic": "UNPROTECT" 
+							}
+						]
+					},
+					{
+						"Name": "#CP",
+						"Mask": 0x2000,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "PROTECT" 
+							},
+							{ 
+								"Value": 0x2000, 
+								"Mnemonic": "UNPROTECT" 
+							}
+						]
+					}
+				]
+			}
+		],
+		"Eeprom"     : {
+			"Offset" : 0x2100,
+			"Size"   : 128
+		}
+	},
+	{
+		"Processor"  : "16F628A",
+		"RomSize"    : 2048,
+		"RamBanks"   : 4,
+		"RamOffset"  : 0x20,
+		"ComOffset"  : 0x70,
+		"CoreRegs"   : "00,02,03,04,0A,0B",
+		"IdLocations": {
+			"Offset" : 0x2000,
+			"Count"  : 4,
+			"Mask"   : 0x7F
+		},
+		"ConfigWords": [
+			{
+				"Offset": 0x2007,
+				"Bits"   : [
+					{
+						"Name": "FOSC",
+						"Mask": 0x0013,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "LP" 
+							},
+							{ 
+								"Value": 0x0001, 
+								"Mnemonic": "XT" 
+							},
+							{ 
+								"Value": 0x0002, 
+								"Mnemonic": "HS" 
+							},
+							{ 
+								"Value": 0x0003, 
+								"Mnemonic": "EC" 
+							},
+							{ 
+								"Value": 0x0010, 
+								"Mnemonic": "INTIO" 
+							},
+							{ 
+								"Value": 0x0011, 
+								"Mnemonic": "INTCLK" 
+							},
+							{ 
+								"Value": 0x0012, 
+								"Mnemonic": "RCIO" 
+							},
+							{ 
+								"Value": 0x0013, 
+								"Mnemonic": "RCCLK" 
+							}
+						]
+					},
+					{
+						"Name": "WDTE",
+						"Mask": 0x0004,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "WDTDIS" 
+							},
+							{ 
+								"Value": 0x0004, 
+								"Mnemonic": "WDTEN" 
+							}
+						]
+					},
+					{
+						"Name": "#PWRTE",
+						"Mask": 0x0008,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "PWRTEN" 
+							},
+							{ 
+								"Value": 0x0008, 
+								"Mnemonic": "PWRTDIS" 
+							}
+						]
+					},
+					{
+						"Name": "MCLRE",
+						"Mask": 0x0020,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "MCLRDIS" 
+							},
+							{ 
+								"Value": 0x0020, 
+								"Mnemonic": "MCLREN" 
+							}
+						]
+					},
+					{
+						"Name": "BOREN",
+						"Mask": 0x0040,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "BORDIS" 
+							},
+							{ 
+								"Value": 0x0040, 
+								"Mnemonic": "BOREN" 
+							}
+						]
+					},
+					{
+						"Name": "LVP",
+						"Mask": 0x0080,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "LVPDIS" 
+							},
+							{ 
+								"Value": 0x0080, 
+								"Mnemonic": "LVPEN" 
+							}
+						]
+					},
+					{
+						"Name": "#CPD",
+						"Mask": 0x0100,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "CPD" 
+							},
+							{ 
+								"Value": 0x0100, 
+								"Mnemonic": "UNPROTECT" 
+							}
+						]
+					},
+					{
+						"Name": "#CP",
+						"Mask": 0x2000,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "PROTECT" 
+							},
+							{ 
+								"Value": 0x2000, 
+								"Mnemonic": "UNPROTECT" 
+							}
+						]
+					}
+				]
+			}
+		],
+		"Eeprom"     : {
+			"Offset": 0x2100,
+			"Size"   : 128
+		}
+	},
+	{
+		"Processor"  : "16F648A",
+		"RomSize"    : 4096,
+		"RamBanks"   : 4,
+		"RamOffset"  : 0x20,
+		"ComOffset"  : 0x70,
+		"CoreRegs"   : "00,02,03,04,0A,0B",
+		"IdLocations": {
+			"Offset" : 0x2000,
+			"Count"  : 4,
+			"Mask"   : 0x7F
+		},
+		"ConfigWords": [
+			{
+				"Offset": 0x2007,
+				"Bits"   : [
+					{
+						"Name": "FOSC",
+						"Mask": 0x0013,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "LP" 
+							},
+							{ 
+								"Value": 0x0001, 
+								"Mnemonic": "XT" 
+							},
+							{ 
+								"Value": 0x0002, 
+								"Mnemonic": "HS" 
+							},
+							{ 
+								"Value": 0x0003, 
+								"Mnemonic": "EC" 
+							},
+							{ 
+								"Value": 0x0010, 
+								"Mnemonic": "INTIO" 
+							},
+							{ 
+								"Value": 0x0011, 
+								"Mnemonic": "INTCLK" 
+							},
+							{ 
+								"Value": 0x0012, 
+								"Mnemonic": "RCIO" 
+							},
+							{ 
+								"Value": 0x0013, 
+								"Mnemonic": "RCCLK" 
+							}
+						]
+					},
+					{
+						"Name": "WDTE",
+						"Mask": 0x0004,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "WDTDIS" 
+							},
+							{ 
+								"Value": 0x0004, 
+								"Mnemonic": "WDTEN" 
+							}
+						]
+					},
+					{
+						"Name": "#PWRTE",
+						"Mask": 0x0008,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "PWRTEN" 
+							},
+							{ 
+								"Value": 0x0008, 
+								"Mnemonic": "PWRTDIS" 
+							}
+						]
+					},
+					{
+						"Name": "MCLRE",
+						"Mask": 0x0020,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "MCLRDIS" 
+							},
+							{ 
+								"Value": 0x0020, 
+								"Mnemonic": "MCLREN" 
+							}
+						]
+					},
+					{
+						"Name": "BOREN",
+						"Mask": 0x0040,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "BORDIS" 
+							},
+							{ 
+								"Value": 0x0040, 
+								"Mnemonic": "BOREN" 
+							}
+						]
+					},
+					{
+						"Name": "LVP",
+						"Mask": 0x0080,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "LVPDIS" 
+							},
+							{ 
+								"Value": 0x0080, 
+								"Mnemonic": "LVPEN" 
+							}
+						]
+					},
+					{
+						"Name": "#CPD",
+						"Mask": 0x0100,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "CPD" 
+							},
+							{ 
+								"Value": 0x0100, 
+								"Mnemonic": "UNPROTECT" 
+							}
+						]
+					},
+					{
+						"Name": "#CP",
+						"Mask": 0x2000,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "PROTECT" 
+							},
+							{ 
+								"Value": 0x2000, 
+								"Mnemonic": "UNPROTECT" 
+							}
+						]
+					}
+				]
+			}
+		],
+		"Eeprom"     : {
+			"Offset": 0x2100,
+			"Size"   : 256
+		}
+	},
+	/* 16F688 */
+	{
+		"Processor"  : "16F688",
+		"RomSize"    : 4096,
+		"RamBanks"   : 4,
+		"RamOffset"  : 0x20,
+		"ComOffset"  : 0x70,
+		"CoreRegs"   : "00,02,03,04,0A,0B",
+		"IdLocations": {
+			"Offset" : 0x2000,
+			"Count"  : 4,
+			"Mask"   : 0x7F
+		},
+		"ConfigWords": [
+			{
+				"Offset": 0x2007,
+				"Bits"   : [
+					{
+						"Name": "FOSC",
+						"Mask": 0x0007,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "LP" 
+							},
+							{ 
+								"Value": 0x0001, 
+								"Mnemonic": "XT" 
+							},
+							{ 
+								"Value": 0x0002, 
+								"Mnemonic": "HS" 
+							},
+							{ 
+								"Value": 0x0003, 
+								"Mnemonic": "EC" 
+							},
+							{ 
+								"Value": 0x0004, 
+								"Mnemonic": "INTIO" 
+							},
+							{ 
+								"Value": 0x0005, 
+								"Mnemonic": "INTCLK" 
+							},
+							{ 
+								"Value": 0x0006, 
+								"Mnemonic": "RCIO" 
+							},
+							{ 
+								"Value": 0x0007, 
+								"Mnemonic": "RCCLK" 
+							}
+						]
+					},
+					{
+						"Name": "WDTE",
+						"Mask": 0x0008,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "WDTDIS" 
+							},
+							{ 
+								"Value": 0x0008, 
+								"Mnemonic": "WDTEN" 
+							}
+						]
+					},
+					{
+						"Name": "#PWRTE",
+						"Mask": 0x0010,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "PWRTEN" 
+							},
+							{ 
+								"Value": 0x0010, 
+								"Mnemonic": "PWRTDIS" 
+							}
+						]
+					},
+					{
+						"Name": "MCLRE",
+						"Mask": 0x0020,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "MCLRDIS" 
+							},
+							{ 
+								"Value": 0x0020, 
+								"Mnemonic": "MCLREN" 
+							}
+						]
+					},
+					{
+						"Name": "#CP",
+						"Mask": 0x0040,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "PROTECT" 
+							},
+							{ 
+								"Value": 0x0040, 
+								"Mnemonic": "UNPROTECT" 
+							}
+						]
+					},
+					{
+						"Name": "#CPD",
+						"Mask": 0x0080,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "CPD" 
+							},
+							{ 
+								"Value": 0x0080, 
+								"Mnemonic": "UNPROTECT" 
+							}
+						]
+					},
+					{
+						"Name": "BOREN",
+						"Mask": 0x0300,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "BORDIS" 
+							},
+							{ 
+								"Value": 0x0100, 
+								"Mnemonic": "SBOREN" 
+							},
+							{ 
+								"Value": 0x0200, 
+								"Mnemonic": "BOREN_XSLP" 
+							},
+							{ 
+								"Value": 0x0300, 
+								"Mnemonic": "BOREN" 
+							}
+						]
+					},
+					{
+						"Name": "IESO",
+						"Mask": 0x0400,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "IESODIS" 
+							},
+							{ 
+								"Value": 0x0400, 
+								"Mnemonic": "IESOEN" 
+							}
+						]
+					},
+					{
+						"Name": "FCMEN",
+						"Mask": 0x0800,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "FCMDIS" 
+							},
+							{ 
+								"Value": 0x0800, 
+								"Mnemonic": "FCMEN" 
+							}
+						]
+					}
+				]
+			}
+		],
+		"Eeprom"     : {
+			"Offset" : 0x2100,
+			"Size"   : 256
+		}
+	},
+	/* 12F1822,12F1840 */
+	{
+		"Processor"  : "12F1822",
+		"RomSize"    : 2048,
+		"RamBanks"   : 32,
+		"RamOffset"  : 0x20,
+		"ComOffset"  : 0x70,
+		"CoreRegs"   : "00-0B",
+		"IdLocations": {
+			"Offset" : 0x8000,
+			"Count"  : 4,
+			"Mask"   : 0x7F
+		},
+		"ConfigWords": [
+			{
+				"Offset": 0x8007,
+				"Bits"   : [
+					{
+						"Name": "FOSC",
+						"Mask": 0x0007,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "FOSC_LP" 
+							},
+							{ 
+								"Value": 0x0001, 
+								"Mnemonic": "FOSC_XT" 
+							},
+							{ 
+								"Value": 0x0002, 
+								"Mnemonic": "FOSC_HS" 
+							},
+							{ 
+								"Value": 0x0003, 
+								"Mnemonic": "FOSC_EXTRC" 
+							},
+							{ 
+								"Value": 0x0004, 
+								"Mnemonic": "FOSC_INTOSC" 
+							},
+							{ 
+								"Value": 0x0005, 
+								"Mnemonic": "FOSC_ECL" 
+							},
+							{ 
+								"Value": 0x0006, 
+								"Mnemonic": "FOSC_ECM" 
+							},
+							{ 
+								"Value": 0x0007, 
+								"Mnemonic": "FOSC_ECH" 
+							}
+						]
+					},
+					{
+						"Name": "WDTE",
+						"Mask": 0x0018,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "WDTE_OFF" 
+							},
+							{ 
+								"Value": 0x0008, 
+								"Mnemonic": "WDTE_SWDTEN" 
+							},
+							{ 
+								"Value": 0x0010, 
+								"Mnemonic": "WDTE_NSLEEP" 
+							},
+							{ 
+								"Value": 0x0018, 
+								"Mnemonic": "WDTE_ON" 
+							}
+						]
+					},
+					{
+						"Name": "#PWRTE",
+						"Mask": 0x0020,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "PWRTE_ON" 
+							},
+							{ 
+								"Value": 0x0020, 
+								"Mnemonic": "PWRTE_OFF" 
+							}
+						]
+					},
+					{
+						"Name": "MCLRE",
+						"Mask": 0x0040,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "MCLRE_OFF" 
+							},
+							{ 
+								"Value": 0x0040, 
+								"Mnemonic": "MCLRE_ON" 
+							}
+						]
+					},
+					{
+						"Name": "#CP",
+						"Mask": 0x0080,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "CP_ON" 
+							},
+							{ 
+								"Value": 0x0080, 
+								"Mnemonic": "CP_OFF" 
+							}
+						]
+					},
+					{
+						"Name": "#CPD",
+						"Mask": 0x0100,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "CPD_ON" 
+							},
+							{ 
+								"Value": 0x0100, 
+								"Mnemonic": "CPD_OFF" 
+							}
+						]
+					},
+					{
+						"Name": "BOREN",
+						"Mask": 0x0600,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "BORDIS" 
+							},
+							{ 
+								"Value": 0x0200, 
+								"Mnemonic": "SBOREN" 
+							},
+							{ 
+								"Value": 0x0400, 
+								"Mnemonic": "BOREN_XSLP" 
+							},
+							{ 
+								"Value": 0x0600, 
+								"Mnemonic": "BOREN" 
+							}
+						]
+					},
+					{
+						"Name": "#CLKOUTEN",
+						"Mask": 0x0800,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "CLKOUTEN_ON" 
+							},
+							{ 
+								"Value": 0x0800, 
+								"Mnemonic": "CLKOUTEN_OFF" 
+							}
+						]
+					},
+					{
+						"Name": "IESO",
+						"Mask": 01000,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "IESO_OFF" 
+							},
+							{ 
+								"Value": 0x1000, 
+								"Mnemonic": "IESO_ON" 
+							}
+						]
+					},
+					{
+						"Name": "FCMEN",
+						"Mask": 0x2000,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "FCMEN_OFF" 
+							},
+							{ 
+								"Value": 0x2000, 
+								"Mnemonic": "FCMEN_ON" 
+							}
+						]
+					}
+				]
+			},
+			{
+				"Offset": 0x8008,
+				"Bits"   : [
+					{
+						"Name": "WRT",
+						"Mask": 0x0003,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "WRT_ALL" 
+							},
+							{ 
+								"Value": 0x0001, 
+								"Mnemonic": "WRT_HALF" 
+							},
+							{ 
+								"Value": 0x0002, 
+								"Mnemonic": "WRT_BOOT" 
+							},
+							{ 
+								"Value": 0x0003, 
+								"Mnemonic": "WRT_OFF" 
+							}
+						]
+					},
+					{
+						"Name": "PLLEN",
+						"Mask": 0x0100,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "PLLEN_OFF" 
+							},
+							{ 
+								"Value": 0x0100, 
+								"Mnemonic": "PLLEN_ON" 
+							}
+						]
+					},
+					{
+						"Name": "STVREN",
+						"Mask": 0x0200,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "STVREN_OFF" 
+							},
+							{ 
+								"Value": 0x0200, 
+								"Mnemonic": "STVREN_ON" 
+							}
+						]
+					},
+					{
+						"Name": "BORV",
+						"Mask": 0x0400,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "BORV_25" 
+							},
+							{ 
+								"Value": 0x0400, 
+								"Mnemonic": "BORV_19" 
+							}
+						]
+					},
+					{
+						"Name": "#DEBUG",
+						"Mask": 0x1000,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "DEBUG_ON" 
+							},
+							{ 
+								"Value": 0x1000, 
+								"Mnemonic": "DEBUG_OFF" 
+							}
+						]
+					},
+					{
+						"Name": "#LVP",
+						"Mask": 0x2000,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "LVP_OFF" 
+							},
+							{ 
+								"Value": 0x2000, 
+								"Mnemonic": "LVP_ON" 
+							}
+						]
+					}
+				]
+			}
+		],
+		"Eeprom"     : {
+			"Offset" : 0xF000,
+			"Size"   : 128
+		}
+	},
+	{
+		"Processor"  : "12F1840",
+		"RomSize"    : 4096,
+		"RamBanks"   : 32,
+		"RamOffset"  : 0x20,
+		"ComOffset"  : 0x70,
+		"CoreRegs"   : "00-0B",
+		"IdLocations": {
+			"Offset": 0x8000,
+			"Count"  : 4,
+			"Mask"   : 0x7F
+		},
+		"ConfigWords": [
+			{
+				"Offset": 0x8007,
+				"Bits"   : [
+					{
+						"Name": "FOSC",
+						"Mask": 0x0007,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "FOSC_LP" 
+							},
+							{ 
+								"Value": 0x0001, 
+								"Mnemonic": "FOSC_XT" 
+							},
+							{ 
+								"Value": 0x0002, 
+								"Mnemonic": "FOSC_HS" 
+							},
+							{ 
+								"Value": 0x0003, 
+								"Mnemonic": "FOSC_EXTRC" 
+							},
+							{ 
+								"Value": 0x0004, 
+								"Mnemonic": "FOSC_INTOSC" 
+							},
+							{ 
+								"Value": 0x0005, 
+								"Mnemonic": "FOSC_ECL" 
+							},
+							{ 
+								"Value": 0x0006, 
+								"Mnemonic": "FOSC_ECM" 
+							},
+							{ 
+								"Value": 0x0007, 
+								"Mnemonic": "FOSC_ECH" 
+							}
+						]
+					},
+					{
+						"Name": "WDTE",
+						"Mask": 0x0018,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "WDTE_OFF" 
+							},
+							{ 
+								"Value": 0x0008, 
+								"Mnemonic": "WDTE_SWDTEN" 
+							},
+							{ 
+								"Value": 0x0010, 
+								"Mnemonic": "WDTE_NSLEEP" 
+							},
+							{ 
+								"Value": 0x0018, 
+								"Mnemonic": "WDTE_ON" 
+							}
+						]
+					},
+					{
+						"Name": "#PWRTE",
+						"Mask": 0x0020,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "PWRTE_ON" 
+							},
+							{ 
+								"Value": 0x0020, 
+								"Mnemonic": "PWRTE_OFF" 
+							}
+						]
+					},
+					{
+						"Name": "MCLRE",
+						"Mask": 0x0040,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "MCLRE_OFF" 
+							},
+							{ 
+								"Value": 0x0040, 
+								"Mnemonic": "MCLRE_ON" 
+							}
+						]
+					},
+					{
+						"Name": "#CP",
+						"Mask": 0x0080,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "CP_ON" 
+							},
+							{ 
+								"Value": 0x0080, 
+								"Mnemonic": "CP_OFF" 
+							}
+						]
+					},
+					{
+						"Name": "#CPD",
+						"Mask": 0x0100,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "CPD_ON" 
+							},
+							{ 
+								"Value": 0x0100, 
+								"Mnemonic": "CPD_OFF" 
+							}
+						]
+					},
+					{
+						"Name": "BOREN",
+						"Mask": 0x0600,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "BOREN_OFF" 
+							},
+							{ 
+								"Value": 0x0200, 
+								"Mnemonic": "BOREN_SBODEN" 
+							},
+							{ 
+								"Value": 0x0400, 
+								"Mnemonic": "BOREN_NSLEEP" 
+							},
+							{ 
+								"Value": 0x0600, 
+								"Mnemonic": "BOREN_ON" 
+							}
+						]
+					},
+					{
+						"Name": "#CLKOUTEN",
+						"Mask": 0x0800,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "CLKOUTEN_ON" 
+							},
+							{ 
+								"Value": 0x0800, 
+								"Mnemonic": "CLKOUTEN_OFF" 
+							}
+						]
+					},
+					{
+						"Name": "IESO",
+						"Mask": 01000,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "IESO_OFF" 
+							},
+							{ 
+								"Value": 0x1000, 
+								"Mnemonic": "IESO_ON" 
+							}
+						]
+					},
+					{
+						"Name": "FCMEN",
+						"Mask": 0x2000,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "FCMEN_OFF" 
+							},
+							{ 
+								"Value": 0x2000, 
+								"Mnemonic": "FCMEN_ON" 
+							}
+						]
+					}
+				]
+			},
+			{
+				"Offset": 0x8008,
+				"Bits"   : [
+					{
+						"Name": "WRT",
+						"Mask": 0x0003,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "WRT_ALL" 
+							},
+							{ 
+								"Value": 0x0001, 
+								"Mnemonic": "WRT_HALF" 
+							},
+							{ 
+								"Value": 0x0002, 
+								"Mnemonic": "WRT_BOOT" 
+							},
+							{ 
+								"Value": 0x0003, 
+								"Mnemonic": "WRT_OFF" 
+							}
+						]
+					},
+					{
+						"Name": "PLLEN",
+						"Mask": 0x0100,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "PLLEN_OFF" 
+							},
+							{ 
+								"Value": 0x0100, 
+								"Mnemonic": "PLLEN_ON" 
+							}
+						]
+					},
+					{
+						"Name": "STVREN",
+						"Mask": 0x0200,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "STVREN_OFF" 
+							},
+							{ 
+								"Value": 0x0200, 
+								"Mnemonic": "STVREN_ON" 
+							}
+						]
+					},
+					{
+						"Name": "BORV",
+						"Mask": 0x0400,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "BORV_25" 
+							},
+							{ 
+								"Value": 0x0400, 
+								"Mnemonic": "BORV_19" 
+							}
+						]
+					},
+					{
+						"Name": "#DEBUG",
+						"Mask": 0x1000,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "DEBUG_ON" 
+							},
+							{ 
+								"Value": 0x1000, 
+								"Mnemonic": "DEBUG_OFF" 
+							}
+						]
+					},
+					{
+						"Name": "#LVP",
+						"Mask": 0x2000,
+						"Values": [
+							{ 
+								"Value": 0x0000, 
+								"Mnemonic": "LVP_OFF" 
+							},
+							{ 
+								"Value": 0x2000, 
+								"Mnemonic": "LVP_ON" 
+							}
+						]
+					}
+				]
+			}
+		],
+		"Eeprom"     : {
+			"Offset" : 0xF000,
+			"Size"   : 256
+		}
+	}
+]

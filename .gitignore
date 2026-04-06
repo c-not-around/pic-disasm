@@ -1,0 +1,7 @@
+src/include/
+src/*.pcu
+src/*.pdb
+src/*.exe
+src/*.dll
+src/*.json
+src/*.xml
