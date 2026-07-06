@@ -500,7 +500,7 @@ type
           var instruction := flash[address];
           
           // Listing
-          ListingBuilder.AppendFormat('{0:X4}:  {1:X4} ', address, instruction);
+          ListingBuilder.AppendFormat('{0:X4}:'#9'{1:X4} ', address, instruction);
           
           if (instruction <> DummyWord) and _LabelList.Contains(address) then
             ListingBuilder.AppendFormat('l_{0:X4} ', address)
