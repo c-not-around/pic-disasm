@@ -1,4 +1,4 @@
-﻿unit Pic;
+﻿unit UPic;
 
 
 {$reference Newtonsoft.Json.dll}

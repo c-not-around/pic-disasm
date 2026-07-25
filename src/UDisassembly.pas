@@ -1,4 +1,4 @@
-﻿unit Disassembly;
+﻿unit UDisassembly;
 
 
 {$reference Newtonsoft.Json.dll}
@@ -12,7 +12,7 @@ uses System.Text.RegularExpressions;
 uses System.Collections.Generic;
 uses System.IntelHex;
 uses Newtonsoft.Json;
-uses Pic;
+uses UPic;
 
 
 type

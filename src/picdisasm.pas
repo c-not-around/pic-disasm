@@ -1,73 +1,57 @@
 ﻿uses System;
 uses System.IO;
-uses Disassembly;
+uses UArgsParser;
+uses UDisassembly;
 
+
+procedure ErrorExit(text: string);
+begin
+  Console.WriteLine(text);
+  Environment.Exit(0);
+end;
 
 begin
-  var args := Environment.GetCommandLineArgs();
+  var ArgParser := new ArgsParser();
+  ArgParser.AddArg('help',      '?', ArgumentType.BooleanArg, false,       'Display this help text.');
+  ArgParser.AddArg('processor', 'p', ArgumentType.StringArg,  '',          'Specify the processor type.');
+  ArgParser.AddArg('source',    'h', ArgumentType.StringArg,  '',          'Specify the source IntelHex (*.hex) file.');
+  ArgParser.AddArg('outfile',   'o', ArgumentType.StringArg,  '',          'Specify out-file path without extension: e.g. -o=C:\Temp\p16f628a_dump.');
+  ArgParser.AddArg('listing',   'l', ArgumentType.BooleanArg, false,       'Save listing to file "<outfile>.lst".');
+  ArgParser.AddArg('asmfile',   'a', ArgumentType.BooleanArg, false,       'Save asm-code to file "<outfile>.asm".');
   
-  var source    := '';
-  var processor := '';
-  var outfile   := '';
-  var listing   := false;
-  var asmfile   := false;
-  var helptext  := args.Length = 1;
+  ArgParser.Parse(Environment.GetCommandLineArgs());
   
-  var OptionRegex := new Regex('-(?<opt>[hpola?])(=(?<val>.+))?', RegexOptions.IgnoreCase);
+  if ArgParser.ArgumentsIsEmpty or ArgParser.BooleanArgumentValue['help'] then
+    ErrorExit(ArgParser.HelpText);
   
-  foreach var arg in args do
-    begin
-      var option := OptionRegex.Match(arg);
-      
-      if option.Success then
-        begin
-          var s := option.Groups.Count > 2 ? option.Groups[3].Value : '';
-        
-          case option.Groups[2].Value.ToLower() of
-            'h': source    := s;
-            'p': processor := s;
-            'o': outfile   := s;
-            'l': listing   := true;
-            'a': asmfile   := true;
-            '?': helptext  := true;
-          end;
-        end;
-    end;
+  Console.WriteLine('Overriden options:');
+  Console.WriteLine(ArgParser.Overrides);
   
-  if helptext then
-    Console.WriteLine
-    (
-      '-h=<source.hex>  Source IntelHex (*.hex) file'#13#10 +
-      '-p=<processor>   Crystal type: PIC16F628A -> 16f628a, PIC12F1840 -> 12f1840, ... etc.'#13#10 +
-      '-o=<outfile>     Specify out-file path without extension: e.g. -o=C:\Temp\p16f628a_dump'#13#10 +
-      '-l               Save listing to file "<outfile>.lst"'#13#10 +
-      '-a               Save asm-code to file "<outfile>.asm"'
-    );
+  var processor := ArgParser.StringArgumentValue['processor'];
+  var source    := ArgParser.StringArgumentValue['source'];
+  var outfile   := ArgParser.StringArgumentValue['outfile'];
+  var listing   := ArgParser.BooleanArgumentValue['listing'];
+  var asmfile   := ArgParser.BooleanArgumentValue['asmfile'];
   
-  if not ((args.Length = 1) or (args.Length = 2) and (helptext))  then
-    if (source <> '') and (processor <> '') and (listing or asmfile) then
-      begin
-        try
-          var path   := AppDomain.CurrentDomain.BaseDirectory;
-          var disasm := new Pic16DisAssembler(path + 'p16is.json', path + 'p16db.json');
-          disasm.IncludePath := path + 'include'; 
-          var res := disasm.Disassembly(processor, source);
-          
-          if outfile = '' then
-            outfile := source;
-          
-          outfile := System.IO.Path.GetFileNameWithoutExtension(outfile);
-          
-          if listing then
-            &File.WriteAllText(outfile + '.lst', res.Listing);
-          
-          if asmfile then
-            &File.WriteAllText(outfile + '.asm', res.AsmFile);
-          
-        except on ex: Exception do
-          Console.WriteLine($'fail: {ex.Message}{#13#10#13#10}{ex.StackTrace}');
-        end;
-      end
-    else
-      Console.WriteLine('Invalid arguments.');
+  try
+    var path := AppDomain.CurrentDomain.BaseDirectory;
+    
+    var disasm := new Pic16DisAssembler(path + 'p16is.json', path + 'p16db.json');
+    disasm.IncludePath := path + 'include'; 
+    
+    var res := disasm.Disassembly(processor, source);
+    
+    if outfile = '' then
+      outfile := source;
+    
+    outfile := System.IO.Path.GetFileNameWithoutExtension(outfile);
+    
+    if listing then
+      &File.WriteAllText(outfile + '.lst', res.Listing);
+    
+    if asmfile then
+      &File.WriteAllText(outfile + '.asm', res.AsmFile);
+  except on ex: Exception do
+    Console.WriteLine($'fail: {ex.Message}{#13#10#13#10}{ex.StackTrace}');
+  end;
 end.
